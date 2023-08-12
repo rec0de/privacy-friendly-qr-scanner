@@ -48,8 +48,6 @@ public class URLResultFragment extends ResultFragment {
         qrurl = result.getURI();
 
         TextView resultText = (TextView) v.findViewById(R.id.textDomain);
-        TextView furtherInfo = (TextView) v.findViewById(R.id.textLink);
-        furtherInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         Uri uri = Uri.parse(qrurl);
         String host = uri.getHost();
@@ -76,40 +74,25 @@ public class URLResultFragment extends ResultFragment {
 
         resultText.setText(WordtoSpan);
 
-        // checked = trust = getBoolean("trust", false);
-
-        final CheckBox knowDomain = (CheckBox) v.findViewById(R.id.checkBoxKnowRisks);
-
-        // wenn bereits vertraut wurde, checkbox setzen
-        if (trust)
-            knowDomain.setChecked(true);
-
-        knowDomain.setOnClickListener(v1 -> checked = knowDomain.isChecked());
-
         return v;
     }
 
     public void onProceedPressed(Context context) {
-        if (!checked) {
-            Toast.makeText(context, R.string.conform_url, Toast.LENGTH_LONG).show();
+        String caption = "";
+        String qrurl3 = "";
+        final String lowercase_qrurl = qrurl.toLowerCase();
+        if (!lowercase_qrurl.startsWith("http://") && !lowercase_qrurl.startsWith("https://")) {
+            qrurl3 = "http://" + qrurl;
+
+            Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
+            url.setData(Uri.parse(qrurl3));
+            caption = getResources().getStringArray(R.array.url_array)[0];
+            startActivity(Intent.createChooser(url, caption));
         } else {
-            String caption = "";
-            String qrurl3 = "";
-            final String lowercase_qrurl = qrurl.toLowerCase();
-            if (!lowercase_qrurl.startsWith("http://") && !lowercase_qrurl.startsWith("https://")) {
-                qrurl3 = "http://" + qrurl;
-
-                Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
-                url.setData(Uri.parse(qrurl3));
-                caption = getResources().getStringArray(R.array.url_array)[0];
-                startActivity(Intent.createChooser(url, caption));
-            } else {
-                Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
-                url.setData(Uri.parse(qrurl));
-                caption = getResources().getStringArray(R.array.url_array)[0];
-                startActivity(Intent.createChooser(url, caption));
-
-            }
+            Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
+            url.setData(Uri.parse(qrurl));
+            caption = getResources().getStringArray(R.array.url_array)[0];
+            startActivity(Intent.createChooser(url, caption));
         }
     }
 

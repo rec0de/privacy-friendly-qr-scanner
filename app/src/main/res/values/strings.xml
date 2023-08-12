@@ -28,7 +28,7 @@
     <string name="slide2_heading">What are the features?</string>
     <string name="text_slide2">With this app you can both scan and create QR codes.</string>
     <string name="slide3_heading">More features</string>
-    <string name="text_slide3">The QR code you scanned can be saved in History. Furthermore you can share it or copy it.</string>
+    <string name="text_slide3">The QR code you scanned can be saved in your history. You can also share or copy it.</string>
     <string name="wecome">Welcome!</string>
     <string name="skip">Skip</string>
     <string name="next">Next</string>
@@ -37,31 +37,22 @@
     <string name="tutorial">Tutorial</string>
 
     <!--###ABOUT###-->
-    <string name="about_author">Authors: </string>
-    <string name="about_author_names" translatable="false">Christopher Beckmann, Bassel Hanna, Philipp Rack, Tobias Länge</string>
-    <string name="about_author_string">%s and contributors.</string>
-    <string name="about_affiliation">In affiliation with</string>
-    <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by SECUSO. Sourcecode licensed under GPLv3. Images copyright Karlsruhe Institute of Technology and Google Inc.</string>
-    <string name="more_info">More information can be found on:</string>
-    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
-    <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="privacy_friendly">Originally developed by SECUSO as part of their Privacy Friendly Apps and licensed under GPLv3. Original authors: Christopher Beckmann, Bassel Hanna, Philipp Rack and Tobias Länge</string>
+    <string name="github" translatable="false"><a href="https://github.com/rec0de/privacy-friendly-qr-scanner">github</a></string>
+
     <string name="about_libraries">Used libraries:</string>
     <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
-    <string name="app_name_long">Privacy Friendly QR Scanner</string>
+    <string name="app_name_long">QR Scanner</string>
     <string name="version_number">Version v%s</string>
     <string name="delete_items">Delete items</string>
 
-    <string name="scan_text">Place this window above the code u want to decode.</string>
+    <string name="scan_text">Place the QR code here</string>
     <string name="action_clear">Clear History</string>
     <string name="cannot_clear">The history is already empty</string>
-    <string name="knowRisks">I checked the link and want to visit the website.</string>
     <string name="domain">Domain</string>
-    <string name="urlExplanation">QR-Codes can contain links, that lead to a faked website, which can compromise your personal data (phishing website) or transfer malware (e.g. viruses) to your device.\n\nAs a consequence you should <b>check</b> if the following link is the one you expected:</string>
-    <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">Information</a> on how to check links.</string>
     <string name="delete_history">Do you want to delete the history?</string>
     <string name="ok">Okay</string>
     <string name="element_removed">Element removed.</string>
-    <string name="conform_url">Please confirm, that you checked the link.</string>
     <string name="wifi_explanation">This version of the app cannot connect to WIFI networks automatically due to the permission that would be needed. Below are some details about the network.</string>
     <string name="encryption">Encryption</string>
     <string name="action_about">About</string>
@@ -194,7 +185,7 @@
     <string name="action_help">Help</string>
 
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">PRIVACY FRIENDLY QR Code Scanner App allows to scan barcodes and qr-codes with various content while requiring Minimal set of permissions and supporting the detection of malicious links.</string>
+    <string name="welcome_text">PRIVACY FRIENDLY QR Code Scanner App allows to scan barcodes and qr-codes with various content while requiring minimal set of permissions.</string>
     <string name="welcome">Welcome</string>
     <string name="viewhelp">View Help</string>
 
